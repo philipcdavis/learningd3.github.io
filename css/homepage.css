@@ -1,0 +1,20 @@
+#bubble-canvas {
+  background-color: white;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: none;
+  border-bottom: 1px solid #E7F1F7;
+}
+
+.homepage-dark {
+  background-color: #1C1C1C;
+  color: #eee;
+}
+
+.homepage-icon {
+  position: relative;
+  top: 4px;
+}

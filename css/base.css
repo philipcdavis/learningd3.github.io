@@ -1,0 +1,63 @@
+::root {
+  --yellow: "red";
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #111;
+  font-family: -apple-system, BlinkMacSystemFont, helvetica, roboto, segoe ui, arial, sans-serif;
+  margin: 0;
+  font-size: 1.2rem;;
+}
+
+p {
+  line-height: 1.5;
+}
+
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+li {
+  list-style: none;
+  line-height: 1.6;
+  border-bottom: 1px solid #333;
+  padding: 10px;
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #E7F1F7;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

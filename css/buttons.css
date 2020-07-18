@@ -1,0 +1,49 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s all ease-out;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color:#A83F0A;
+  transition: 0.2s all ease-out;
+  opacity: 0;
+}
+
+.btn-md {
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn-yellow {
+  background-color: #FFC545;
+  color: #111;
+}
+
+.btn-black {
+  background-color: #333;
+  color: white;
+}
