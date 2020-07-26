@@ -1,6 +1,6 @@
 (function () {
   var width = window.innerWidth,
-    height = parseInt(d3.select('.bubble-container').style('height'));
+    height = parseInt(d3.select('#bubbles').style('height'));
 
   var x = d3.scaleLinear()
     .domain([0, 100])
@@ -10,15 +10,16 @@
     .domain([0, 100])
     .range([0, height]);
 
-  var colors = ["rgba(0, 86, 255, 0.5)", "rgba(255, 62, 62, 0.6)", "rgba(255, 197, 69, 0.6)"];
+  var colors = ["rgba(85,143,255,0.9)", "rgba(255, 197, 69, 0.9)", "rgba(255, 85, 63, 0.9)"];
   var colorScale = d3.scaleQuantize().domain([0, 1]).range(colors);
 
-  var data = d3.range(25).map(function () {
+  var data = d3.range(30).map(function () {
+    var size = Math.random();
     var dataObject = {
       x: Math.random() * 100,
       y: Math.random() * 100,
-      yvel: Math.random() * 0.4,
-      size: (Math.random() * 45) + 10,
+      yvel: size * 0.2,
+      size: size * 7 + 2,
       color: colorScale(Math.random())
     };
 
@@ -44,7 +45,7 @@
     var context = htmlCanvas.getContext('2d');
     width = window.innerWidth;
     htmlCanvas.width = width;
-    height = parseInt(d3.select('.bubble-container').style('height'));
+    height = parseInt(d3.select('#bubbles').style('height'));
     htmlCanvas.height = height;
     x = d3.scaleLinear()
       .domain([0, 100])

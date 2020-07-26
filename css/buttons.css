@@ -12,11 +12,12 @@
 
 
 .btn:hover::after {
-  opacity: 1;
+  opacity: 0.2;
 }
 
 .btn:active {
   transform: scale(0.97);
+
 }
 
 .btn::after {
@@ -26,7 +27,7 @@
   right: 0;
   bottom: 0;
   top: 0;
-  background-color:#A83F0A;
+  background-color:#430c9b;
   transition: 0.2s all ease-out;
   opacity: 0;
 }
@@ -38,12 +39,19 @@
   font-weight: bold;
 }
 
-.btn-yellow {
+.btn-lg {
+  padding: 18px 40px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btn-light {
   background-color: #FFC545;
   color: #111;
 }
 
-.btn-black {
-  background-color: #333;
-  color: white;
+.btn-dark {
+  background-color: #FFC545;
+  color: black;
 }

@@ -1,12 +1,10 @@
-#bubble-canvas {
-  background-color: white;
-  left: 0;
+#bubbles {
+  position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
   z-index: -1;
-  display: none;
-  border-bottom: 1px solid #E7F1F7;
 }
 
 .homepage-dark {
@@ -17,4 +15,30 @@
 .homepage-icon {
   position: relative;
   top: 4px;
+}
+
+.homepage-canvas {
+  position: relative;
+  border-bottom: 2px solid #efefef;
+}
+
+.homepage-container-lg {
+  width: 92%;
+  max-width: 1400px;
+}
+
+.homepage-geo-chart {
+    opacity: .8;
+    margin: 0 auto;
+    width: 800px;
+    top: -140px;
+    position: relative;
+    margin-bottom: -143px;
+    display: none;
+}
+
+@media (min-width: 40em) {
+  .homepage-geo-chart {
+    display: block;
+  }
 }

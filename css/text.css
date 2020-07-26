@@ -1,3 +1,32 @@
 .text-yellow { color: #FFC545;}
 .text-red { color: #FF6359;}
 .text-blue { color: #5E86FB;}
+.text-white { color: white;}
+
+.text-strikethrough {
+  position: relative;
+  color: #555;
+  display: inline-block;
+}
+.text-strikethrough::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 50%;
+  border-bottom: 2px solid white;
+}
+
+.text-price {
+  font-size: 5rem;
+  position: relative;
+  display: inline-block;
+  width: 95px;
+}
+
+.text-price-dollar {
+  font-size: 1.3rem;
+  opacity: 0.4;
+  left: -15px;
+  top:10px;
+  position: absolute;
+}

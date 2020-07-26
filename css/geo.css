@@ -1,0 +1,26 @@
+
+.geo-province:hover {
+  opacity: .7;
+}
+
+.geo-highlight {
+  fill: #FF5757;
+}
+
+.geo-highlight:hover {
+  opacity: 1;
+}
+
+.geo-place-label {
+  font-size: 8px;
+  fill: #666;
+  text-transform: uppercase;
+  pointer-events: none;
+  font-family: verdana, sans-serif;
+  text-shadow: 0 1px 0 white, 0 -1px 0 white, 1px 0 0 white, -1px 0 0 white;
+}
+
+.geo-place-dot {
+  pointer-events: none;
+  fill: #666;
+}
