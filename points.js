@@ -1,6 +1,6 @@
 (function () {
-  var width = window.innerWidth,
-    height = parseInt(d3.select('#bubbles').style('height'));
+  var width = window.innerWidth * 2,
+    height = parseInt(d3.select('.bubble-container').style('height')) * 2;
 
   var x = d3.scaleLinear()
     .domain([0, 100])
@@ -9,16 +9,16 @@
   var y = d3.scaleLinear()
     .domain([0, 100])
     .range([0, height]);
-  // var colors = ["rgba(0, 0, 0, 0.2)", "rgba(0, 0, 0, 0.5)", "rgba(0, 0, 0, 0.8)"];
-  var colors = ["rgba(85,143,255,0.9)", "rgba(255, 197, 69, 0.9)", "rgba(255, 85, 63, 0.9)"];
+
+  var colors = ["rgba(69, 166, 255, 0.6)", "rgba(255, 49, 57, 0.6)", "rgba(236, 240, 241, 0.6)"];
   var colorScale = d3.scaleQuantize().domain([0, 1]).range(colors);
 
-  var data = d3.range(30).map(function () {
+  var data = d3.range(35).map(function () {
     var dataObject = {
       x: Math.random() * 100,
       y: Math.random() * 100,
-      yvel: Math.random() * 0.1,
-      size: (Math.random() * 15) + 2,
+      yvel: Math.random() * 0.4,
+      size: (Math.random() * 25) + 5,
       color: colorScale(Math.random())
     };
 
@@ -42,9 +42,9 @@
   d3.select(window).on('resize', function () {
     var htmlCanvas = document.getElementById('bubble-canvas');
     var context = htmlCanvas.getContext('2d');
-    width = window.innerWidth;
+    width = window.innerWidth * 2;
     htmlCanvas.width = width;
-    height = parseInt(d3.select('#bubbles').style('height'));
+    height = parseInt(d3.select('.bubble-container').style('height')) * 2;
     htmlCanvas.height = height;
     x = d3.scaleLinear()
       .domain([0, 100])
@@ -67,11 +67,11 @@
       if (d.y < (0 - d.size)) {
         d.y = 100 + d.size;
       }
-      
-      context.globalCompositeOperation = "multiply";
+
       context.fillStyle = d.color;
       context.beginPath();
       context.arc(x(d.x), y(d.y), d.size, 0, 2 * Math.PI);
+
       context.fill();
     });
   });

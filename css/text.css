@@ -2,6 +2,7 @@
 .text-red { color: #FF6359;}
 .text-blue { color: #5E86FB;}
 .text-white { color: white;}
+.text-gray1 { color: #eee;}
 
 .text-strikethrough {
   position: relative;

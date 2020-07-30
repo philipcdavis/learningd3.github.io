@@ -12,7 +12,7 @@
 
 
 .btn:hover::after {
-  opacity: 0.2;
+  opacity: 0.2 !important;
 }
 
 .btn:active {
@@ -27,7 +27,7 @@
   right: 0;
   bottom: 0;
   top: 0;
-  background-color:#430c9b;
+  background-color:#061d9e;
   transition: 0.2s all ease-out;
   opacity: 0;
 }
@@ -40,18 +40,20 @@
 }
 
 .btn-lg {
-  padding: 18px 40px;
+  padding: 16px 40px;
   border-radius: 8px;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.btn-light {
-  background-color: #FFC545;
-  color: #111;
+.btn-primary {
+  background-color: #4183FF;
+  color: #f4f9ff;
+  box-shadow: 0 2px 0 #1163FE;
+  
 }
 
-.btn-dark {
-  background-color: #FFC545;
-  color: black;
+.btn-primary-ondark {
+  background-color: #4183FF;
+  color: #f4f9ff;
 }

@@ -17,6 +17,9 @@
   <meta property="og:image:secure_url" content="https://learningd3.com/assets/img/logo-standalone-whitespace.jpg?1">
 
   <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/basscss-responsive-margin@1.1.0/css/responsive-margin.css" rel="stylesheet">
+  <link href="https://unpkg.com/basscss-responsive-padding@1.1.0/css/responsive-padding.css" rel="stylesheet">
+  <link href="https://unpkg.com/basscss-responsive-type-scale@1.0.1/css/responsive-type-scale.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
   
@@ -40,7 +43,7 @@
 </head>
 <body>
   <div>
-    <div class="homepage-canvas pt4">
+    <div class="homepage-canvas pt1 sm-pt4">
       <div class="max-width-4 mx-auto p2">
         <div class="flex">
           <div class="flex-auto flex">
@@ -50,16 +53,18 @@
               <div>D3.js</div>
             </div>
           </div>
-          <a href="#" class="btn btn-md btn-light">Purchase</a>
+          <a href="#" class="btn btn-md btn-primary">Purchase</a>
         </div>
       </div>
       <div class="center mt4 pb4">
         <div>
-          <div id="bubbles"></div>
-          <h1 class="center pt2 mb1">Build Data Visualizations from the Ground Up</h1>
-          <p class="center h2 mt0 mb4">Learn how to build unique and interactive visualizations from scratch</p>
+          <div class="xs-hide sm-hide">
+            <div id="bubbles"></div>
+          </div>  
+          <h1 class="h2 sm-h1 center pt2 mb1">Build Data Visualizations from the Ground Up</h1>
+          <p class="center h3 sm-h2 mt0 mb4">Learn how to build unique and interactive visualizations from scratch</p>
       
-          <div class="z1 max-width-2 mx-auto mb4">
+          <div class="z1 max-width-2 mx-auto mb2 md-mb4">
             <div class="fluidvids" style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/185170670"
                 width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""
                 class="fluidvids-item" data-fluidvids="loaded"></iframe></div>
@@ -67,10 +72,10 @@
         </div>
       </div>
     </div>
-    <div class="max-width-3 p4 mx-auto">
+    <div class="max-width-3 sm-p4 p2 mx-auto">
       <div>
-        <div class="h1 pt4 bold">Data visualization on your terms</div>
-        <p>
+        <div class="h2 sm-h1 pt2 md-pt4 bold">Data visualization on your terms</div>
+        <p class="h4 sm-h3">
           D3 is the most flexible library for creating data visualizations. It’s in a class of its own.
           If you want to understand the D3 library, and build awesome data visualizations, this course is for you. It’s a
           <b>concise</b> and <b>comprehensive</b> guide to learning D3.
@@ -87,9 +92,9 @@
           <b>If you know enough to copy and paste examples</b>, but not enough to create visualizations from scratch, you’ll
           get a lot out of this course.
         </p>
-        <div class="h2 pt3 mb2 bold">Watch a sample lesson</div>
+        <div class="h3 sm-h2 pt3 mb2 bold">Watch a sample lesson</div>
       </div>
-      <div class="mb4">
+      <div class="mb2 md-mb4">
         <div>
           <!-- Begin MailChimp Signup Form -->
           <div id="mc_embed_signup">
@@ -113,8 +118,8 @@
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
                         name="b_f2b5aed612d56a7f603cfb3ec_10fc00a98b" tabindex="-1" value=""></div>
-                    <div class="clear"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe"
-                        class="button btn btn-light btn-bold btn-md  mb2"></div>
+                    <div class="clear"><button name="subscribe" id="mc-embedded-subscribe"
+                        class="button btn btn-primary btn-bold btn-md  mb2">Submit</button></div>
                   </div>
                 </div>
               </div>
@@ -128,16 +133,16 @@
     </div>
     
     <div>
-      <div class="homepage-geo-chart">
+      <div class="homepage-geo-chart xs-hide sm-hide">
         <div id="geo-chart"></div>
       </div>
     
-      <div class="homepage-dark pt3">
-        <h1 class="center py4">The course is made up of 3 modules</h1>
+      <div class="homepage-dark pt3"> 
+        <h1 class="center py2 md-py4 text-gray1">Course Lessons</h1>
         <div class="homepage-container-lg mx-auto">
-          <div class="flex mx-auto">
-            <div class="px3">
-              <h2>Core Concepts</h2>
+          <div class="mx-auto clearfix">
+            <div class="mb4 col col-12 lg-col-4 lg-mb0 lg-px3">
+              <h2 class="text-gray1">Core Concepts</h2>
               <p>
                 Nail the building blocks of D3. We’ll cover just enough HTML, CSS, Javascript, and SVG so that you’re
                 comfortable. We’ll also learn design principles for our visualizations.
@@ -153,8 +158,8 @@
                 <li class="text-yellow">Design Principles</li>
               </ul>
             </div>
-            <div class="px3">
-              <h2>Understanding D3</h2>
+            <div class="col col-12 lg-col-4 mb4 lg-mb0 lg-px3">
+              <h2 class="text-gray1">Understanding D3</h2>
               <p>
                 Make sure you have a strong grasp of the library. We’ll look at selections, data-joins, transitions, scales,
                  and more. We'll use the material covered to build a visualization from scratch.
@@ -171,8 +176,8 @@
                 <li class="text-red">Building a Bar Chart</li>
               </ul>
             </div>
-            <div>
-              <h2>Advanced Techniques</h2>
+            <div class="col col-12 lg-col-4 mb4 lg-mb0 lg-px3">
+              <h2 class="text-gray1">Advanced Techniques</h2>
               <p>
                 Take your skill set to the next level. This module gives techniques to make your visualizations responsive,
                 performant, reusable, and much more. We’ll wrap up by creating an interactive dashboard.
@@ -189,25 +194,25 @@
             </div>
           </div>
     
-          <div class="p2 mt4 max-width-4 mx-auto clearfix">
-            <div class="mt4">
-              <h1>Pricing</h1>
+          <div class="lg-px3 mt4 max-width-4 mx-auto clearfix">
+            <div class="mt2 lg-mt4">
+              <h1 class="text-gray1">Pricing</h1>
             
               <p class="max-width-2">
                 Pay once, and get access to everything. If you're not happy with the course, let me know within 7 days of purchase and i'll give you a refund.
               </p>
 
-              <div class="col col-6">
-                <h2 class="text-yellow">
-                  <svg class="homepage-icon mr1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              <div class="col col-12 lg-col-8">
+                <h2 class="text-yellow h2 lg-h1 ">
+                  <svg class="homepage-icon mr1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square">
                     <polyline points="9 11 12 14 22 4"></polyline>
                     <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
                   </svg>
                   
                   One Time Payment</h2>
-                <h2 class="text-red">
-                  <svg class="homepage-icon mr1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                <h2 class="text-red h2 lg-h1">
+                  <svg class="homepage-icon mr1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-check-square">
                     <polyline points="9 11 12 14 22 4"></polyline>
@@ -215,8 +220,8 @@
                   </svg>
 
                   Source Files Included</h2>
-                <h2 class="text-blue">
-                  <svg class="homepage-icon mr1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                <h2 class="text-blue h2 lg-h1">
+                  <svg class="homepage-icon mr1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-check-square">
                     <polyline points="9 11 12 14 22 4"></polyline>
@@ -224,21 +229,21 @@
                   </svg>
                   Download or Stream HD Videos</h2>
               </div>
-              <div class="col col-6 center">
+              <div class="col col-12 lg-col-4 mt3 lg-mt0 center">
                 <h2 class="text-strikethrough m0 p0">$200</h2>
                 <div>
-                  <h1 class="text-price mt0 mb2 p0"><span class="text-price-dollar">$</span>99</h1>
+                  <h1 class="text-price mt0 mb1 p0 text-white"><span class="text-price-dollar">$</span>99</h1>
                 </div>
-                <a href="/purchase" class="btn btn-lg btn-light">Get the Course</a>
+                <a href="/purchase" class="btn btn-lg btn-primary-ondark">Get the Course</a>
               </div>
             </div>
           </div>
     
-          <div class="max-width-4  mx-auto">
-            <h1 class="mt4 px2">FAQ</h1>
+          <div class="lg-px3 max-width-4 mx-auto">
+            <h1 class="mt4 text-gray1">FAQ</h1>
             <div class="clearfix">
-              <div class="col col-6 px2">
-                <h3 class="mb2">What is D3.js?</h3>
+              <div class="col col-12 lg-col-6 lg-pr1">
+                <h3 class="mb2 text-gray1">What is D3.js?</h3>
                 <p class="mt0">
                   D3.js is a javascript library that lets you build interactive visualizations with extreme flexibility.
                 </p>
@@ -248,15 +253,14 @@
                   there will be a few api differences.
                 </p>
               </div>
-              <div class="col col-6 px2">
+              <div class="col col-12 lg-col-6 mt2 lg-mt0 lg-pl1">
                 
-                
-                <h3>Can I take the course if I don't know JavaScript?</h3>
+                <h3 class="text-gray1">Can I take the course if I don't know JavaScript?</h3>
                 <p>
                   Yes! I include a lesson that covers the basics of javascript in the core concepts module.
                 </p>
                 
-                <h3 class="mt4">What if I don't like the course?</h3>
+                <h3 class="mt4 text-gray1">What if I don't like the course?</h3>
                 <p>
                   If you're not happy with the course, let me know within 7 days of purchase and i'll give you a refund.
                 </p>
@@ -270,18 +274,18 @@
               
               <div>
                 <h3>Ready to get started?</h3>
-                <a href="/purchase" class="btn btn-lg btn-light">Get the Course</a>
+                <a href="/purchase" class="btn btn-lg btn-primary-ondark">Get the Course</a>
                 <br>
               </div>
             </div>
           </div>
         </div>
-        <div class="homepage-footer flex p3 mt4 mb0">
+        <div class="homepage-footer lg-flex p3 mt4 mb0">
           <div class="flex-auto">
             Get in Contact: <a class="text-white" href="https://twitter.com/philipcdavis">Twitter</a> <a class="text-white"
               href="mailto:learningd3js@gmail.com">Email</a>
           </div>
-          <div>Created and taught by Philip Davis</div>
+          <div class="mt2 lg-mt0">Created and taught by Philip Davis</div>
         </div>
       </div>
   </div>
@@ -290,15 +294,13 @@
   <script async="" src="//www.google-analytics.com/analytics.js"></script>
   <script type="text/javascript" src="geo.js"></script>
   <script type="text/javascript">
-
     d3.json('./china.json', function (error, data) {
       if (error) return error;
       var geo = geoChart()
         .container("#geo-chart")
         .data(data)
         .height(280);
-      geo()
-
+      geo();
     });
   </script>
 

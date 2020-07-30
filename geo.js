@@ -1,5 +1,5 @@
 var geoChart = function () {
-  var width = 960;
+  var width = 800;
   var height = 800;
   var container = null;
   var data = null;
