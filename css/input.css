@@ -1,6 +1,7 @@
 .input {
   border-radius: 8px;
   padding: 11px;
+  -webkit-appearance: none;
 }
 
 .input-gray {

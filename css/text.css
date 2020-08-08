@@ -31,3 +31,13 @@
   top:10px;
   position: absolute;
 }
+
+.xl-h1 {
+  font-size:2rem;
+}
+
+@media (min-width: 40em) {
+  .xl-h1 {
+    font-size:2.3rem;
+  }
+}

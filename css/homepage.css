@@ -13,8 +13,17 @@
 }
 
 .homepage-icon {
-  position: relative;
-  top: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 60em) {
+  .homepage-icon {
+    position: relative;
+    top: 4px;
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .homepage-canvas {
